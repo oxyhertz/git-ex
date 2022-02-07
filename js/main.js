@@ -1,1 +1,3 @@
-console.log('Starting up');
+"use strict";
+$(init());
+console.log("Starting up");
