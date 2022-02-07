@@ -18,7 +18,7 @@ function renderProjs() {
           <i class="fa fa-plus fa-3x"></i>
         </div>
       </div>
-      <img class="img-fluid" src="img/portfolio/${project.id}.jpg" alt="" />
+      <img class="img-fluid" src="img/portfolio/${project.id}.png" alt="" />
     </a>
     <div class="portfolio-caption">
       <h4>${project.name}</h4>
@@ -39,7 +39,7 @@ function onOpenModal() {
   $("modal-body .modal-desc").text(proj.desc);
   $(".modal-project-date").text(getTime(proj.publishedAt));
   $(".modal-project-labels").text(proj.labels.join(", "));
-  $(".project-img").attr("src", `img/portfolio/${proj.id}.jpg`);
+  $(".project-img").attr("src", `img/portfolio/${proj.id}.png`);
   $(".project-link").attr("href", proj.url);
 }
 
@@ -47,9 +47,16 @@ function onUserMsgSubmit() {
   const userEmail = $("#userEmail").val();
   const userSubject = $("#userSubject").val();
   const userMessage = $("#userMessage").val();
-  console.log(userMessage);
+  // if (!userEmail || !userSubject || !userMessage) return;
   var emailUrl = `
   https://mail.google.com/mail/?view=cm&fs=1&to=${userEmail}&su=${userSubject}&body=${userMessage}`;
 
-  window.open(emailUrl, "Contant Me", "_blank");
+  window.open(emailUrl, "_blank");
+  clearContactInputs();
+}
+
+function clearContactInputs() {
+  $("#userEmail").val("");
+  $("#userSubject").val("");
+  $("#userMessage").val("");
 }

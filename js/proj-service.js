@@ -24,7 +24,7 @@ function _createProjects() {
       "Pacman",
       "Eat some food beat some ghosts",
       makeLorem(50),
-      "projs/pacman",
+      "https://oxyhertz.github.io/pacman/",
       1643199595000,
       ["Matrix", "Key Events"]
     )
@@ -36,7 +36,7 @@ function _createProjects() {
       "Minesweeper",
       "Playing minesweeper is our passion. That's why we strive to make it the greatest game in the world!",
       makeLorem(50),
-      "projs/minesweeper",
+      "https://oxyhertz.github.io/minesweeper/",
       1643285995000,
       ["Matrix", "Mouse Events"]
     )
@@ -47,9 +47,42 @@ function _createProjects() {
       "In-Picture Game",
       "Guess what is in the picture",
       makeLorem(50),
-      "projs/in-picture-game",
+      "https://oxyhertz.github.io/in-picture/",
       1642940395000,
       ["Display", "css"]
+    )
+  );
+  projects.push(
+    _createProject(
+      "touchNums",
+      "Touch Nums",
+      "Touch the numbers",
+      makeLorem(50),
+      "https://oxyhertz.github.io/touch-nums/",
+      1642274095000,
+      ["Matrix", "css"]
+    )
+  );
+  projects.push(
+    _createProject(
+      "ballBoard",
+      "Ball Board",
+      "Ball Board Game",
+      makeLorem(50),
+      "https://oxyhertz.github.io/ball-board-game/",
+      1642274095000,
+      ["Matrix", "Mouse Events", "css"]
+    )
+  );
+  projects.push(
+    _createProject(
+      "booksShop",
+      "Books Shop",
+      "Books shop smart table",
+      makeLorem(50),
+      "https://oxyhertz.github.io/book-proj/",
+      1644002095000,
+      ["Advanced DOM", "MVC", "css"]
     )
   );
 
