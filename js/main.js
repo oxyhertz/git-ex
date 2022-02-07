@@ -2,7 +2,7 @@
 $(init());
 
 $(".portfolio-link").click(onOpenModal);
-
+$(".btn-send-msg").click(onUserMsgSubmit);
 function init() {
   renderProjs();
 }
@@ -41,4 +41,15 @@ function onOpenModal() {
   $(".modal-project-labels").text(proj.labels.join(", "));
   $(".project-img").attr("src", `img/portfolio/${proj.id}.jpg`);
   $(".project-link").attr("href", proj.url);
+}
+
+function onUserMsgSubmit() {
+  const userEmail = $("#userEmail").val();
+  const userSubject = $("#userSubject").val();
+  const userMessage = $("#userMessage").val();
+  console.log(userMessage);
+  var emailUrl = `
+  https://mail.google.com/mail/?view=cm&fs=1&to=${userEmail}&su=${userSubject}&body=${userMessage}`;
+
+  window.open(emailUrl, "Contant Me", "_blank");
 }
