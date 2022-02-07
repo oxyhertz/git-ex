@@ -1,5 +1,13 @@
 "use strict";
 
+function getTime(timeStamp) {
+  var date = new Date(timeStamp);
+  date = `${date.getDate()}/${date.getMonth() + 1} ${date.getHours()}:${
+    date.getMinutes() < 10 ? `0` + date.getMinutes() : date.getMinutes()
+  }`;
+  return date;
+}
+
 function makeId(length = 6) {
   const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
   var txt = "";

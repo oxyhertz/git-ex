@@ -59,3 +59,8 @@ function _createProjects() {
 function getProjs() {
   return gProjs;
 }
+
+function getProjById(projId) {
+  const proj = gProjs.find((project) => projId === project.id);
+  return proj;
+}
