@@ -2,7 +2,7 @@
 
 function getTime(timeStamp) {
   var date = new Date(timeStamp);
-  date = `${date.getDate()}/${date.getMonth() + 1} ${date.getHours()}:${
+  date = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()} ${date.getHours()}:${
     date.getMinutes() < 10 ? `0` + date.getMinutes() : date.getMinutes()
   }`;
   return date;

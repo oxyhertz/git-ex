@@ -37,5 +37,8 @@ function onOpenModal() {
   $(".modal-body h2").text(proj.name);
   $(".modal-body .item-intro").text(proj.title);
   $("modal-body .modal-desc").text(proj.desc);
-  $(".modal-project-date").text();
+  $(".modal-project-date").text(getTime(proj.publishedAt));
+  $(".modal-project-labels").text(proj.labels.join(", "));
+  $(".project-img").attr("src", `img/portfolio/${proj.id}.jpg`);
+  $(".project-link").attr("href", proj.url);
 }
