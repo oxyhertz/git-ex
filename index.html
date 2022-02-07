@@ -46,6 +46,50 @@
       <!-- Contact -->
       <section id="contact">
         <h4>Contact Me</h4>
+        <form>
+          <div class="form-group">
+            <label for="userEmail">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              name="userEmail"
+              placeholder="name@example.com"
+              id="userEmail"
+            />
+          </div>
+          <label for="userSubject">Subject</label>
+          <input
+            type="txt"
+            class="form-control"
+            name="userSubject"
+            id="userSubject"
+            placeholder="Type subject here"
+          />
+        </div>
+
+          <div class="form-group">
+            <label for="userMessage">Message Body</label>
+            <textarea class="form-control" placeholder="Type message text here" name="userMessage" 
+           id="userMessage" rows="5"></textarea>
+
+          </div>
+          <button type="submit" class="btn btn-send-msg">Submit</button>
+        </form>
+        <!-- <form class="ending-form">
+          <label for="userEmail">You thought of: </label>
+          <input name="userEmail" type="email" id="userEmail" placeholder="Your Guess" required />
+
+          <label for="newQuest">Question to differentiate:</label>
+          <input
+            name="newQuest"
+            type="txt"
+            id="newQuest"
+            placeholder="The answer is YES for yours"
+            required
+          />
+
+          <button type="submit" class="btn btn-add-guess">Make me Smarter!</button>
+        </form> -->
       </section>
     </aside>
 
